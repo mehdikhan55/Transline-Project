@@ -1,8 +1,11 @@
-# React + Vite
+<h1>AI-Powered Language Translator</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- A secure web application equipped with password protection, enabling users to leverage the <b>ChatGPT API</b> for language 
+translation.
+- Supports almost all languages.
+- Users have the flexibility to choose input and output text languages, document types, and GPT versions, creating
+a user-friendly translation experience.
+- Implemented using React JS, integrating with Chat GPT API.
 
-Currently, two official plugins are available:
+<a href="https://translit-project.vercel.app/">Live Preview</a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
