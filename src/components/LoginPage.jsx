@@ -36,6 +36,7 @@ export default function LoginPage({auth, setAuth}) {
       <form onSubmit={handleSubmit} className="login-box">
         <label htmlFor="pass-field"><h2>Password</h2></label>
         <input value={pass}  onChange={(e)=>setPass(e.target.value)} type="password" required id='pass-field' />
+        <p>(Hint: 1212)</p>
         <button  className='login-btn' >Login</button>
       </form>
     </section>
