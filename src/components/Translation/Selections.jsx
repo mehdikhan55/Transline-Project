@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import loader from '../../assets/loader.svg'
 
-export default function Selections({ inputLanguage, setInputLanguage, outputLanguage, setOutputLanguage, gptVersion, setGptVersion, loading, setLoading, documentType, setDocumentType, translate, docTypeByUser,setDocTypeByUser,error }) {
+export default function Selections({ inputLanguage, setInputLanguage, outputLanguage, setOutputLanguage, gptVersion, setGptVersion,showGPTVersion = true, loading, setLoading, documentType, setDocumentType, translate, docTypeByUser, setDocTypeByUser, error }) {
 
 
     const translateNow = async () => {
@@ -26,12 +26,16 @@ export default function Selections({ inputLanguage, setInputLanguage, outputLang
                     </option>
                 ))}
             </select>
-            <h4>GPT Version</h4>
-            <select name="gpt" id="gpt" onChange={(e) => setGptVersion(e.target.value)}
-                value={gptVersion}>
-                <option value="gpt3">GPT 3.5</option>
-                <option value="gpt4">GPT 4</option>
-            </select>
+            {showGPTVersion && (
+                <>
+                    <h4>GPT Version</h4>
+                    <select name="gpt" id="gpt" onChange={(e) => setGptVersion(e.target.value)}
+                        value={gptVersion}>
+                        <option value="gpt3">GPT 3.5</option>
+                        <option value="gpt4">GPT 4</option>
+                    </select>
+                </>
+            )}
             <h4>Document Type</h4>
             <select name="doc" id="doc" onChange={(e) => setDocumentType(e.target.value)}
                 value={documentType}>
@@ -42,7 +46,7 @@ export default function Selections({ inputLanguage, setInputLanguage, outputLang
                 (
                     <div className='doc-type-box'>
                         <label htmlFor="doc-type"><h4>Write Doc Type </h4></label>
-                        <input value={docTypeByUser} onChange={(e)=>setDocTypeByUser(e.target.value)} type="text" id='doc-type'  />
+                        <input value={docTypeByUser} onChange={(e) => setDocTypeByUser(e.target.value)} type="text" id='doc-type' />
                     </div>
                 )
 
@@ -74,7 +78,8 @@ const languageOptions = [
     'Czech',
     'Danish',
     'Dutch',
-    'English',
+    'UK English',
+    'US English',
     'Estonian',
     'Finnish',
     'French',
