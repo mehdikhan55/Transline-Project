@@ -325,6 +325,22 @@
   .translation_box{
     height: 300px;
   }
+
+  .doc-type-box{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .doc-type-box label h4{
+    margin: 0;
+  }
+
+  #doc-type{
+    width: 100%;
+    min-width: unset;
+  }
 }
 
 .loader{
